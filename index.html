@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/135afbfc6b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <section class="container">
+            <a href="#" id="but" onmouseover="changeColor(this);"><i class="fas fa-camera-retro"></i></a>
+            <a href="#" id="but" onmouseover="changeColor(this);"><i class="fas fa-code"></i></a>
+            <a href="#" onmouseover="changeColor(this);"><i class="fas fa-comments"></i></a>
+            <a href="#" onmouseover="changeColor(this);"><i class="fab fa-avianex"></i></a>
+            <a href="#" onmouseover="changeColor(this);"><i class="fas fa-heart"></i></a>
+
+            <!-- parrafo -->
+        </section>
+        <p>El color en rgb es: </p>
+        <p id="col"></p>
+    </main>
+
+    <!-- script -->
+    <script>
+        
+        function changeColor(e){
+            var color = 'rgb(' + Math.floor(Math.random() * 255) + ', ' + Math.floor(Math.random() * 255) + ', ' + Math.floor(Math.random() * 255)  + ')';            
+            var parr = document.getElementById('col');
+            
+            e.style.backgroundColor = color;
+            parr.innerHTML = color;
+            parr.style.color = color;
+            /* console.log(color); */
+        }
+    </script>
+</body>
+</html>
